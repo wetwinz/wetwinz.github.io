@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#02070c">
+
   <title>WETWINZ CLEAN</title>
 
   <style>
@@ -10,73 +12,82 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at center, #06233a 0%, #020b13 45%, #000 100%);
       font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111111;
-      text-align: center;
+      color: white;
     }
 
     .page {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 35px 20px;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 18px;
     }
 
-    .brand {
-      font-size: 44px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      margin: 0;
-    }
-
-    .clean {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 8px;
-      margin-top: 8px;
-    }
-
-    .line {
-      width: 55px;
-      height: 3px;
-      background: #111;
-      margin: 25px auto;
+    .logo {
+      width: min(92vw, 720px);
+      height: auto;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 15px 55px rgba(0, 190, 255, 0.15);
     }
 
     .tagline {
-      font-size: 17px;
-      letter-spacing: 2px;
-      margin-bottom: 45px;
+      margin-top: 30px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #e8faff;
     }
 
     .coming {
-      font-size: 14px;
-      letter-spacing: 3px;
-      color: #777;
+      margin-top: 15px;
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: #00cfff;
     }
 
     .website {
-      position: absolute;
-      bottom: 30px;
-      font-size: 13px;
-      letter-spacing: 1px;
+      margin-top: 45px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #c8a951;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        width: 96vw;
+        border-radius: 12px;
+      }
+
+      .tagline {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="page">
+  <main class="page">
 
-    <h1 class="brand">WETWINZ</h1>
-    <div class="clean">CLEAN</div>
-
-    <div class="line"></div>
+    <img
+      class="logo"
+      src="wetwinz-clean-logo.png"
+      alt="WETWINZ CLEAN"
+    >
 
     <div class="tagline">
       SMART CLEANING. BETTER LIVING.
@@ -90,7 +101,7 @@
       WETWINZ.AE
     </div>
 
-  </div>
+  </main>
 
 </body>
 </html>
